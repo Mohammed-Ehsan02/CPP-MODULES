@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 20:27:44 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/11 16:38:41 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/11 20:11:06 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	replace_text(std::ifstream &MyFile, char **argv)
 		final_str = "";
 		std::getline(MyFile, content_str);
 		pos_idx = content_str.find(to_find);
-		while (pos_idx != 0xFFFFFFFFFFFFFFFF)
+		while (pos_idx != std::string::npos)
 		{
 			content_str.erase(pos_idx, to_find.size());
 			final_str = final_str + content_str.substr(0, pos_idx);
@@ -48,7 +48,7 @@ void	replace_text(std::ifstream &MyFile, char **argv)
 			content_str = content_str.substr(pos_idx);
 			pos_idx = content_str.find(to_find);
 		}
-		if (content_str.size() && pos_idx == 0xFFFFFFFFFFFFFFFF)
+		if (content_str.size() && pos_idx == std::string::npos)
 			final_str = final_str + content_str.substr(0, pos_idx);
 		rep_file << final_str;
 		if (!MyFile.eof())
