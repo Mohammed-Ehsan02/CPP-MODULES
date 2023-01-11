@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:04:39 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/08 19:23:40 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/08 20:02:32 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class HumanB
 {
 	private:
-		Weapon *_B;
+		Weapon *_WeaponB;
 		std::string _name;
 	public:
 		HumanB(std::string name);
