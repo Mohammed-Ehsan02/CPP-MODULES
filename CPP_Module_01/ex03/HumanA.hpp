@@ -16,7 +16,7 @@
 #include "Weapon.hpp"
 
 class HumanA
-	{
+{
 	private:
 		Weapon &_WeaponA;
 		std::string _name;
