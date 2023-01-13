@@ -6,11 +6,11 @@
 #    By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/19 13:21:45 by mkhan             #+#    #+#              #
-#    Updated: 2023/01/08 19:02:52 by mkhan            ###   ########.fr        #
+#    Updated: 2023/01/08 20:04:31 by mkhan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp Harl.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC = c++
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+# CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = main
 
