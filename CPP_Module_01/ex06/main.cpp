@@ -31,7 +31,8 @@ void	harl_complain(char *argv, Harl &Person)
 			Person.complain("ERROR");
 			break ;
 		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			std::cout << "[ Probably complaining about insignificant problems ]"
+					 << std::endl;
 	}
 }
 
@@ -40,7 +41,8 @@ int main(int argc, char **argv)
 	Harl Person;
 
 	if (argc != 2)
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		std::cout << "[ Probably complaining about insignificant problems ]"
+					<< std::endl;
 	else
 		harl_complain(argv[1], Person);
 }

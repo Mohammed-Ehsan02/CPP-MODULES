@@ -17,7 +17,7 @@ class	Harl
 		~Harl();
 
 		void	complain(std::string level);
-		void	(Harl::*levelptr[4])();
+		
 };
 
 #endif

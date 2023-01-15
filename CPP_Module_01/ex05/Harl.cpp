@@ -21,7 +21,7 @@ void	Harl::info(void)
 }
 void	Harl::warning(void)
 {
-	std::cout << "I think I deserve to have some extra bacon for free. I’ve" <<
+	std::cout << "I think I deserve to have some extra bacon for free. I've" <<
 				" been coming for years whereas you started working here " <<
 				"since last month." << std::endl;
 }
@@ -33,10 +33,11 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	this->levelptr[0] = &Harl::debug;
-	this->levelptr[1] = &Harl::info;
-	this->levelptr[2] = &Harl::warning;
-	this->levelptr[3] = &Harl::error;
+	void	(Harl::*levelptr[4])();
+	levelptr[0] = &Harl::debug;
+	levelptr[1] = &Harl::info;
+	levelptr[2] = &Harl::warning;
+	levelptr[3] = &Harl::error;
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for (int i = 0; i < 4; i++)
 	{
