@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 12:20:08 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/17 17:53:45 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:53:59 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ ScavTrap & ScavTrap::operator=(ScavTrap const &rhs)
 {
 	std::cout << "ScavTrap Copy Assignment Operator called" << std::endl;
 	if (this != &rhs)
-	{
+	{	
 		this->_name = rhs._name;
 		this->_hitPoints = rhs._hitPoints;
 		this->_attackDamage = rhs._attackDamage;
