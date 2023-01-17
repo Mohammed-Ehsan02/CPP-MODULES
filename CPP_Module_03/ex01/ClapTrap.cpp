@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 18:31:19 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/17 17:15:07 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:30:26 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::attack(const std::string &target)
 {
+	std::cout << "ClapTrap attack() is called." << std::endl;
 	if (!this->_hitPoints)
 	{
 		std::cout << "ClapTrap " << this->_name << " has no hit points."
@@ -73,6 +74,7 @@ void	ClapTrap::attack(const std::string &target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
+	std::cout << "ClapTrap takeDamage() is called." << std::endl;
 	if (int(amount) < 0)
 	{
 		std::cout << "Invalid Damage value" << std::endl;
@@ -81,7 +83,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	else if (int(amount) > this->_hitPoints)
 	{
 		this->_hitPoints = 0;
-		std::cout << "ClapTrap " << this->_name << " has" << this->_hitPoints 
+		std::cout << "ClapTrap " << this->_name << " has " << this->_hitPoints 
 				<< " hitPoints left." << std::endl;
 		return ;
 	}
@@ -96,6 +98,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
+	std::cout << "ClapTrap beRepaired() is called." << std::endl;
 	if (!this->_hitPoints)
 	{
 		std::cout << "ClapTrap " << this->_name << " has no hit points."

@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 12:20:08 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/17 17:16:17 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:33:45 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::attack(const std::string &target)
 {
+	std::cout << "ScavTrap attack() is called." << std::endl;
 	if (!this->_hitPoints)
 	{
 		std::cout << "ScavTrap " << this->_name << " has no hit points."
@@ -80,6 +81,7 @@ void	ScavTrap::attack(const std::string &target)
 
 void	ScavTrap::guardGate()
 {
+	std::cout << "ScavTrap guardGate() is called." << std::endl;
 	std::cout << "ScavTrap " << this->_name << "is now in Gate Keeper Mode."
 			<< std::endl;
 }
