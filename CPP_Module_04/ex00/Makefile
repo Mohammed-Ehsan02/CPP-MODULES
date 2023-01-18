@@ -18,7 +18,7 @@ CC = c++
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
 NAME = main
 

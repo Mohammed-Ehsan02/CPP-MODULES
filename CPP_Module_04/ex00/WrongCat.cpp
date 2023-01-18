@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:30:26 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 15:31:12 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/18 21:00:54 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongCat::WrongCat(): _type("WrongCat")
 }
 
 
-WrongCat::WrongCat(WrongCat const &Object)
+WrongCat::WrongCat(WrongCat const &Object): WrongAnimal::WrongAnimal(Object)
 {
 	std::cout << "WrongCat Copy Constructor called" << std::endl;
 	*this = Object;

@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:32:13 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 14:40:00 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/18 21:00:32 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog(): _type("Dog")
 }
 
 
-Dog::Dog(Dog const &Object)
+Dog::Dog(Dog const &Object): Animal::Animal(Object)
 {
 	std::cout << "Dog Copy Constructor called" << std::endl;
 	*this = Object;
