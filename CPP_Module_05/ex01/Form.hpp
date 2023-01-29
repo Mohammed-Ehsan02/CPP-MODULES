@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 13:57:56 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
+/*   Created: 2023/01/29 19:56:23 by mkhan             #+#    #+#             */
+/*   Updated: 2023/01/29 20:12:04 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef FORM_HPP
+#define FORM_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
 
-class Animal
+class Form
 {
-	protected:
-		std::string _type;
-		
-	public:
-		Animal();
-		Animal(Animal const &object);
-		Animal &operator=(Animal const &rhs);
-		virtual ~Animal();
-
-		virtual void	makeSound() const;
-		virtual std::string	getType() const;
+private:
+	const std::string	_name;
+	bool				_isSigned;
+	const int			_signGrade;
+	const int			_execGrade;
+	
+public:
+	Form();
+	Form(Form const &object);
+	Form & operator=(Form const &rhs);
+	~Form();
 };
 
 #endif

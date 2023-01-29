@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 18:31:19 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/17 17:32:36 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:05:32 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints
 	std::cout << "ClapTrap Name Constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const &Object)
+ClapTrap::ClapTrap(ClapTrap const &object)
 {
 	std::cout << "ClapTrap Copy Constructor called" << std::endl;
-	*this = Object;
+	*this = object;
 }
 
 ClapTrap & ClapTrap::operator=(ClapTrap const &rhs)

@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 18:30:29 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/17 10:19:01 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ClapTrap
 	public:
 		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(ClapTrap const &Object);
+		ClapTrap(ClapTrap const &object);
 		ClapTrap &operator=(ClapTrap const &rhs);
 		~ClapTrap();
 

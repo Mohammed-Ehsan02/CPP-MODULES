@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:28:09 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 15:28:39 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:05:32 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ WrongAnimal::WrongAnimal(): _type("WrongAnimal")
 }
 
 
-WrongAnimal::WrongAnimal(WrongAnimal const &Object)
+WrongAnimal::WrongAnimal(WrongAnimal const &object)
 {
 	std::cout << "WrongAnimal Copy Constructor called" << std::endl;
-	*this = Object;
+	*this = object;
 }
 
 WrongAnimal & WrongAnimal::operator=(WrongAnimal const &rhs)

@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:34:12 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/26 19:09:01 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:07:27 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ Fixed::Fixed(float const num)
 	std::cout << "Float Constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &Object)
+Fixed::Fixed(const Fixed &object)
 {
 	std::cout << "Copy Constructor called" << std::endl;
-	*this = Object;
+	*this = object;
 }
 
 Fixed::~Fixed()

@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:40:24 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 14:42:15 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat: public Animal
 	
 	public:
 		Cat();
-		Cat(Cat const &Object);
+		Cat(Cat const &object);
 		Cat &operator=(Cat const &rhs);
 		~Cat();
 

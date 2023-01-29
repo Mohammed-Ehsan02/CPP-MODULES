@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:42:40 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 21:03:39 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class WrongAnimal
 		
 	public:
 		WrongAnimal();
-		WrongAnimal(WrongAnimal const &Object);
+		WrongAnimal(WrongAnimal const &object);
 		WrongAnimal &operator=(WrongAnimal const &rhs);
 		virtual ~WrongAnimal();
 

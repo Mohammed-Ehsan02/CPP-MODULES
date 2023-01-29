@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:57:45 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 14:31:40 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:05:32 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ Animal::Animal(): _type("Animal")
 }
 
 
-Animal::Animal(Animal const &Object)
+Animal::Animal(Animal const &object)
 {
 	std::cout << "Animal Copy Constructor called" << std::endl;
-	*this = Object;
+	*this = object;
 }
 
 Animal & Animal::operator=(Animal const &rhs)

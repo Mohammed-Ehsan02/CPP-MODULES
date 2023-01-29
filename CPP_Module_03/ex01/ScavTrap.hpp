@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 12:19:54 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/17 16:11:41 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ScavTrap : public ClapTrap
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);
-		ScavTrap(ScavTrap const &Object);
+		ScavTrap(ScavTrap const &object);
 		ScavTrap &operator=(ScavTrap const &rhs);
 		~ScavTrap();
 

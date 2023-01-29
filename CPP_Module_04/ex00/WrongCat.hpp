@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:28:53 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/18 15:30:12 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class WrongCat: public WrongAnimal
 	
 	public:
 		WrongCat();
-		WrongCat(WrongCat const &Object);
+		WrongCat(WrongCat const &object);
 		WrongCat &operator=(WrongCat const &rhs);
 		~WrongCat();
 
