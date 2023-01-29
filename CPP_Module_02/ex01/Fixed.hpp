@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FIXED.HPP                                          :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:33:36 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/16 17:50:48 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/26 19:03:16 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 };
+
+std::ostream &operator<<(std::ostream &out, Fixed const &rhs);
 
 #endif

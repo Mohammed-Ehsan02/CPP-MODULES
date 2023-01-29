@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:34:12 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/16 18:28:35 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/26 19:09:01 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,10 @@ int		Fixed::getRawBits() const
 {
 	std::cout << "Get raw bits called" << std::endl;
 	return (this->_fixed);
+}
+
+std::ostream & operator<<(std::ostream &out, Fixed const &rhs)
+{
+	out << rhs.toFloat();
+	return (out);
 }

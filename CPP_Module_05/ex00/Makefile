@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = main.cpp Bureaucrat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -29,7 +29,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $@
-	@printf "\033c"
 
 clean:
 	@$(RM) $(OBJ)
