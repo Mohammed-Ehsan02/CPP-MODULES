@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:28:01 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/29 20:05:32 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/30 15:12:42 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
 	try
 	{
 		if (grade > 150)
-			throw Bureaucrat::GradeTooHighException();
-		else if (grade < 1)
 			throw Bureaucrat::GradeTooLowException();
+		else if (grade < 1)
+			throw Bureaucrat::GradeTooHighException();
 		else
 			this->_grade = grade;
 	}
@@ -80,19 +80,16 @@ Bureaucrat::~Bureaucrat()
 
 int	Bureaucrat::getGrade() const
 {
-	// std::cout << "Bureaucrat getGrade() called" << std::endl;
 	return (this->_grade);
 }
 
 std::string Bureaucrat::getName() const
 {
-	// std::cout << "Bureaucrat getName() called" << std::endl;
 	return (this->_name);
 }
 
 void	Bureaucrat::gradeDecreament()
 {
-	// std::cout << "Bureaucrat gradeDecreament called" << std::endl;
 	try
 	{
 		if (this->_grade > 150)
@@ -111,7 +108,6 @@ void	Bureaucrat::gradeDecreament()
 
 void	Bureaucrat::gradeIncreament()
 {
-	// std::cout << "Bureaucrat gradeIncreament called" << std::endl;
 	try
 	{
 		if (this->_grade > 150)
@@ -129,12 +125,10 @@ void	Bureaucrat::gradeIncreament()
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	// std::cout << "Bureaucrat GradeTooHighException called" << std::endl;
 	return("Grade Too High");
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	// std::cout << "Bureaucrat GradeTooLowException called" << std::endl;
 	return("Grade Too Low");
 }

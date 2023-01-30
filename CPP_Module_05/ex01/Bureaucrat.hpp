@@ -6,15 +6,17 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:19:17 by mkhan             #+#    #+#             */
-/*   Updated: 2023/01/29 20:04:55 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/01/30 15:22:07 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-#include <iostream>
+# include <iostream>
+# include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
 	private:
@@ -43,6 +45,7 @@ class Bureaucrat
 		int			getGrade() const;
 		void		gradeIncreament();
 		void		gradeDecreament();
+		void		signForm(Form &form);
 
 };
 
