@@ -42,12 +42,13 @@ class AForm
 		AForm(std::string name, int _signGrade, int _execGrade);
 		AForm(AForm const &object);
 		AForm & operator=(AForm const &rhs);
-		viirtual ~AForm() = 0;
+		virtual ~AForm() = 0;
 		std::string	getName() const;
 		bool		getSigned() const;
 		int			getSignGrade() const;
 		int			getExecGrade() const;
 		void		beSigned(Bureaucrat const &rhs);
+		void		execute(Bureaucrat const &executor);
 		
 };
 

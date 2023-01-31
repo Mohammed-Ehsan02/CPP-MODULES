@@ -107,3 +107,16 @@ const char* AForm::GradeTooLowException::what() const throw()
 {
 	return("Grade Too Low");
 }
+
+void	AForm::execute(Bureaucrat const &executor)
+{
+	try
+	{
+				
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+}

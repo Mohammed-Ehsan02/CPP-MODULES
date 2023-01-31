@@ -12,7 +12,6 @@
 
 #include "Bureaucrat.hpp"
 
-
 Bureaucrat::Bureaucrat(): _name("No Name"), _grade(125)
 {
 	std::cout << "Bureaucrat Default Constructor called" << std::endl;
@@ -146,3 +145,8 @@ void	Bureaucrat::signAForm(AForm &Aform)
 				" because " << e.what() << '\n';
 	}
 }
+
+// void	Bureaucrat::executeForm(AForm const &Aform)
+// {
+// 	std::cout << 
+// }
