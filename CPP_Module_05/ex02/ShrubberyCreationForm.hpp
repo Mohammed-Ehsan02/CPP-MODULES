@@ -18,13 +18,14 @@ class ShrubberyCreationForm : public AForm
 {
 private:
 	std::string	_target;
-	// class MyAppropriateExecption : public std::exception
-	// {
-	// 	public:
-	// 		const char *what() const throw();
-	// };
+	void	write_ascii_tree() const;
+	class MyAppropriateExecption : public std::exception
+	{
+		public:
+			const char *what() const throw();
+	};
 public:
-	ShrubberyCreationForm();
+	ShrubberyCreationForm(std::string _target);
 	ShrubberyCreationForm(ShrubberyCreationForm const &object);
 	ShrubberyCreationForm & operator=(ShrubberyCreationForm const &rhs);
 	~ShrubberyCreationForm();
