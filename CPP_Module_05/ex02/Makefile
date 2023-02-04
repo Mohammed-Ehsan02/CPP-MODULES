@@ -10,17 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
+SRC =	main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
-OBJ = $(SRC:.cpp=.o)
+OBJ =	$(SRC:.cpp=.o)
 
-CC = c++
+CC =	c++
 
-RM = rm -f
+RM =	rm -f
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
-NAME = main
+NAME =	main
 
 %.o : %.cpp
 			$(CC) $(CFLAGS) -c $< -o $@

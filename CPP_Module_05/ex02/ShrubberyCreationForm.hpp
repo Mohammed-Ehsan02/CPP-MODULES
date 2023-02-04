@@ -14,6 +14,8 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 #include "AForm.hpp"
+#include <fstream>
+
 class ShrubberyCreationForm : public AForm
 {
 private:
@@ -29,8 +31,9 @@ public:
 	ShrubberyCreationForm(ShrubberyCreationForm const &object);
 	ShrubberyCreationForm & operator=(ShrubberyCreationForm const &rhs);
 	~ShrubberyCreationForm();
+
 	void	execute(Bureaucrat const &executor) const;
-	std::string	get_target() const;
+	std::string	getTarget() const;
 };
 
 #endif

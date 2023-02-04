@@ -1,4 +1,4 @@
-eal/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
@@ -15,9 +15,10 @@ eal/* **************************************************************************
 ShrubberyCreationForm::ShrubberyCreationForm(std::string _target): AForm("ShruberryCreationForm", 145, 137), _target(_target)
 {
 	std::cout << "ShrubberyCreationForm Default Constructor called" << std::endl;
+	this->write_ascii_tree();
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &object): AForm(object), _target(object.get_target())
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &object): AForm(object), _target(object.getTarget())
 {
 	std::cout << "ShrubberyCreationForm Copy Constructor called" << std::endl;
 	*this = object;
@@ -36,14 +37,15 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
 }
 
-std::string ShrubberyCreationForm::get_target() const
+std::string ShrubberyCreationForm::getTarget() const
 {
 	return (this->_target);
 }
 
-void 	ShruberryCreationForm::write_ascii_tree() const
+void 	ShrubberyCreationForm::write_ascii_tree() const
 {
 	std::ofstream file;
+
 	try {
 		file.open((this->_target + "_shrubbery").c_str());
 		if (file.fail())
@@ -52,16 +54,41 @@ void 	ShruberryCreationForm::write_ascii_tree() const
 	catch (std::exception &e) {
 		throw;
 	}
-	file << "               ,@@@@@@@,                 " << std::endl;
-	file << "       ,,,.   ,@@@@@@/@@,  .oo8888o.     " << std::endl;
-	file << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\88/8o    " << std::endl;
-	file << "   ,%&\%&&%&&%,@@@\@@@/@@@88\88888/88'   " << std::endl;
-	file << "   %&&%&%&/%&&%@@\@@/ /@@@88888\88888'   " << std::endl;
-	file << "   %&&%/ %&%%&&@@\ V /@@' `88\8 `/88'    " << std::endl;
-	file << "   `&%\ ` /%&'    |.|        \ '|8'      " << std::endl;
-	file << "       |o|        | |         | |        " << std::endl;
-	file << "       |.|        | |         | |        " << std::endl;
-	file << "jgs \\/ ._\//_/__/  ,\_//__\\/.  \_//__/_" << std::endl;
+	file << "              _{\\ _{\\{\\/}/}/}__            " << std::endl;
+	file << "             {/{/\\}{/{/\\}(\\}{/\\} _         " << std::endl;
+	file << "            {/{/\\}{/{/\\}(_)\\}{/{/\\}  _     " << std::endl;
+	file << "         {\\{/(\\}\\}{/{/\\}\\}{/){/\\}\\} /\\}    " << std::endl;
+	file << "        {/{/(_)/}{\\{/)\\}{\\(_){/}/}/}/}     " << std::endl;
+	file << "       _{\\{/{/{\\{/{/(_)/}/}/}{\\(/}/}/}     " << std::endl;
+	file << "      {/{/{\\{\\{\\(/}{\\{\\/}/}{\\}(_){\\/}\\}    " << std::endl;
+	file << "      _{\\{/{\\{/(_)\\}/}{/{/{/\\}\\})\\}{/\\}    " << std::endl;
+	file << "     {/{/{\\{\\(/}{/{\\{\\{\\/})/}{\\(_)/}/}\\}   " << std::endl;
+	file << "      {\\{\\/}(_){\\{\\{\\/}/}(_){\\/}{\\/}/})/}  " << std::endl;
+	file << "       {/{\\{\\/}{/{\\{\\{\\/}/}{\\{\\/}/}\\}(_)   " << std::endl;
+	file << "      {/{\\{\\/}{/){\\{\\{\\/}/}{\\{\\(/}/}\\}/}   " << std::endl;
+	file << "       {/{\\{\\/}(_){\\{\\{\\(/}/}{\\(_)/}/}\\}   " << std::endl;
+	file << "         {/({/{\\{/{\\{\\/}(_){\\/}/}\\}/}(\\}   " << std::endl;
+	file << "          (_){/{\\/}{\\{\\/}/}{\\{\\)/}/}(_)    " << std::endl;
+	file << "            {/{/{\\{\\/}{/{\\{\\{\\(_)/}        " << std::endl;
+	file << "             {/{\\{\\{\\/}/}{\\{\\\\}/}          " << std::endl;
+	file << "              {){/ {\\/}{\\/} \\}\\}           " << std::endl;
+	file << "              (_)  \\.-'.-/                 " << std::endl;
+	file << "          __...--- |'-.-'| --...__         " << std::endl;
+	file << "   _...--\"   .-'   |'-.-'|  ' -.  \"\"--..__ " << std::endl;
+	file << " -\"    ' .  . '    |.'-._| '  . .  '   jro " << std::endl;
+	file << " .  '-  '    .--'  | '-.'|    .  '  . '    " << std::endl;
+	file << "          ' ..     |'-_.-|                 " << std::endl;
+	file << "  .  '  .       _.-|-._ -|-._  .  '  .     " << std::endl;
+	file << "              .'   |'- .-|   '.            " << std::endl;
+	file << "  ..-'   ' .  '.   `-._.-�   .'  '  - .   " << std::endl;
+	file << "   .-' '        '-._______.-'     '  .     " << std::endl;
+	file << "        .      ~,                          " << std::endl;
+	file << "    .       .   |\\   .    ' '-.            " << std::endl;
+	file << "    ___________/  \\____________            " << std::endl;
+	file << "   /  Why is it, when you want \\           " << std::endl;
+	file << "  |  something, it is so damn   |          " << std::endl;
+	file << "  |    much work to get it?     |          " << std::endl;
+	file << "   \\___________________________/           " << std::endl;
 	file.close();
 }
 
