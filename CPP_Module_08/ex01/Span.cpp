@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:13:21 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/06 15:13:30 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/02/07 16:40:30 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,16 @@ Span & Span::operator=(Span const &rhs)
 }
 
 Span::~Span()
+{}
+
+void	Span::addNumber(int num)
+{}
+
+int	Span::shortestSpan()
+{}
+
+int	Span::longestSpan()
+{}
+
+void	Span::addMoreNum()
 {}
