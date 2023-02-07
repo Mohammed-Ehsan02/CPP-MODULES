@@ -14,21 +14,25 @@
 # define SPAN_HPP
 
 #include <iostream>
+#include <vector>
 
 class Span
 {
-private:
-	/* data */
-public:
-	Span();
-	Span(int N);
-	Span(Span const &object);
-	Span & operator=(Span const &rhs);
-	~Span();
-	void	addNumber(int num);
-	int		shortestSpan();
-	int		longestSpan();
-	void	addMoreNum();
+	private:
+		unsigned int		_max;
+		std::vector<int>	_vec;
+
+	public:
+		Span();
+		Span(unsigned int N);
+		Span(Span const &object);
+		Span & operator=(Span const &rhs);
+		~Span();
+
+		void	addNumber(int num);
+		int		shortestSpan();
+		int		longestSpan();
+		void	addMoreNum();
 };
 
 #endif

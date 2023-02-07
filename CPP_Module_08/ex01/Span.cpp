@@ -12,3 +12,26 @@
 
 #include "Span.hpp"
 
+Span::Span()
+{}
+
+Span::Span(unsigned int N): _max(N)
+{}
+
+Span::Span(Span const &object)
+{
+	*this = object;
+}
+
+Span & Span::operator=(Span const &rhs)
+{
+	if (this != &rhs)
+	{
+		this->_max = rhs._max;
+		this->_vec = rhs._vec;
+	}
+	return (*this);
+}
+
+Span::~Span()
+{}
