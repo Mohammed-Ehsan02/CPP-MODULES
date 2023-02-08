@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:12:25 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/07 16:45:06 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/02/08 19:36:30 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <vector>
-// #include <exception>
 
 class Span
 {
@@ -44,7 +43,7 @@ class Span
 		void	addNumber(int num);
 		int		shortestSpan();
 		int		longestSpan();
-		void	addMoreNum();
+		void	addMoreNum(int size);
 };
 
 #endif
