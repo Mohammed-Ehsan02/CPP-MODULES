@@ -31,5 +31,7 @@
 *.exe
 *.out
 *.app
-main
 *_shrubbery
+main
+zombie
+megaphone
