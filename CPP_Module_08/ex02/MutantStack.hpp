@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:32:35 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/09 13:40:54 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/02/09 17:53:25 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <stack>
+# include <vector>
+# include <iterator>
 
 template<  typename T>
 class MutantStack : public std::stack<T>
