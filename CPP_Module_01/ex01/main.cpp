@@ -15,8 +15,7 @@
 int main()
 {
 	int n = 3;
-	if (n < 0)
-		return 1;
+
 	Zombie *zomb = zombieHorde(n, "abc");
 	delete [](zomb);
 	return 0;	

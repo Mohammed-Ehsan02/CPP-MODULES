@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:59:01 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/06 14:42:48 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/02/09 12:17:08 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ Array<T>::Array(unsigned int n): _size(n), _arr(new T[n])
 }
 
 template< typename T>
-Array<T>::Array(Array const &object): _size(0), _arr(0)
+Array<T>::Array(Array const &object): _size(object._size)
 {
-	*this = object;
+	this->_arr = new T[object._size];
+	for (unsigned int i = 0; i < this->_size; i++)
+		this->_arr[i] = object._arr[i];
 }
 
 template< typename T>
