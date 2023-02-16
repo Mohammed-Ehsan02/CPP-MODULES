@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:16:23 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/16 13:35:13 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/02/16 13:49:21 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ ScalarConverter::ScalarConverter(ScalarConverter const &object)
 ScalarConverter & ScalarConverter::operator=(ScalarConverter const &rhs)
 {
 	if (this != &rhs)
-	{
-	}
+	{}
 	return (*this);
 }
 
