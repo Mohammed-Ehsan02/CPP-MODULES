@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:16:23 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/15 19:40:53 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/02/16 13:35:13 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,35 @@ ScalarConverter::~ScalarConverter()
 {
 }
 
-// void	ScalarConverter::toChar(std::string str)
-// {
-
-// }
+void	ScalarConverter::toChar(std::string str)
+{
+	char ch = 0;
+	try
+	{
+		if (str.length() == 1 && !isdigit(str[0]))
+			ch = str[0];
+		else
+		{
+			int	base = 10;
+			char *endptr = NULL;
+			const long long num = std::strtoll(str.c_str(), &endptr, base);
+			if (endptr == str.c_str())
+				throw std::invalid_argument("no conversion possible");
+			if (num < std::numeric_limits<int>::min() || num > std::numeric_limits<int>::max())
+				throw std::out_of_range("out of range");
+			ch = static_cast<char>(num);
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "char: impossible" << '\n';
+		return ;
+	}
+	if (isprint(ch))
+		std::cout << "char: '" << ch << "'" << std::endl;
+	else
+		std::cout << "char: Non displayable" << std::endl;
+}
 
 void	ScalarConverter::toInt(std::string str)
 {
@@ -49,46 +74,20 @@ void	ScalarConverter::toInt(std::string str)
 		{
 			int	base = 10;
 			char *endptr = NULL;
-			num = std::strtoll
+			const long long num2 = std::strtoll(str.c_str(), &endptr, base);
+			if (endptr == str.c_str())
+				throw std::invalid_argument("no conversion possible");
+			if (num2 < std::numeric_limits<int>::min() || num2 > std::numeric_limits<int>::max())
+				throw std::out_of_range("out of range");
+			num = static_cast<int>(num2);
 		}
+		std::cout << "int: " << num << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << "int: impossible" << '\n';
+		return ;
 	}
-	
-	if (str.length() == 1 && !isdigit(str[0]))
-		num = static_cast<int>(str[0]);
-	else
-		num = 
-	// try
-	// {
-	// 	if (this->_str.length() == 1 && !isdigit(this->_str[0]))
-	// 		this->_int = static_cast<int>(this->_str[0]);
-	// 	else
-	// 		this->_int = str_int(this->_str);
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << "int: impossible" << std::endl;
-	// 	return ;
-	// }
-	// std::cout << "int: " << this->_int << std::endl;
-	// ------------------------------------------
-	// std::size_t* idx = NULL;
-	// int base = 10;
-    // char* endptr = NULL;
-    // const long long result = std::strtoll(str.c_str(), &endptr, base);
-    // if (endptr == str.c_str()) {
-    //     throw std::invalid_argument("stoi: no conversion");
-    // }
-    // if (idx != NULL) {
-    //     *idx = static_cast<std::size_t>(endptr - str.c_str());
-    // }
-    // if (result < std::numeric_limits<int>::min() || result > std::numeric_limits<int>::max()) {
-    //     throw std::out_of_range("stoi: out of range");
-    // }
-    // return static_cast<int>(result);
 }
 
 void	ScalarConverter::toFloat(std::string str)
@@ -121,8 +120,8 @@ void	ScalarConverter::toDouble(std::string str)
 
 void	ScalarConverter::convert(std::string str)
 {
-	// toChar(str);
-	// toInt(str);
+	toChar(str);
+	toInt(str);
 	toFloat(str);
 	toDouble(str);
 }
