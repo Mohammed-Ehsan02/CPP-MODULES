@@ -12,7 +12,7 @@
 
 #include "Cat.hpp"
 
-Cat::Cat(): _type("Cat")
+Cat::Cat(): _type("Cat"), _brain(new Brain())
 {
 	std::cout << "Cat Default Constructor called" << std::endl;
 }

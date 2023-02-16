@@ -39,12 +39,10 @@ Animal::~Animal()
 
 void	Animal::makeSound() const
 {
-	std::cout << "Animal::makeSound() called" << std::endl;
 	std::cout << "Animal makes sound ..." << std::endl;
 }
 
 std::string Animal::getType() const
 {
-	std::cout << "Animal::getType() called" << std::endl;
 	return (this->_type);
 }
