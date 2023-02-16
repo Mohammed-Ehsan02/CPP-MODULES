@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serialize.hpp                                      :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 13:54:11 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/16 15:59:08 by mkhan            ###   ########.fr       */
+/*   Created: 2023/02/16 14:05:13 by mkhan             #+#    #+#             */
+/*   Updated: 2023/02/16 14:36:23 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZE_HPP
-#define SERIALIZE_HPP
+#ifndef BASE_HPP
+#define BASE_HPP
 
-# include <iostream>
-# include <string>
-# include <cstdlib>
-# include <cstdint>
-struct Data
-{
-	std::string	s;
-	int			n;
-};
+#include <iostream>
 
-class Serialize
+class Base
 {
 	public:
-		Serialize();
-		Serialize(Serialize const &object);
-		Serialize & operator=(Serialize const &rhs);
-		~Serialize();
-
-		static uintptr_t	serialize(Data *ptr);
-		static Data *deserialize(uintptr_t raw);
+		virtual ~Base();
 };
 
 #endif

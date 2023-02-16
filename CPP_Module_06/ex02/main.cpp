@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serialize.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 13:54:11 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/16 15:59:08 by mkhan            ###   ########.fr       */
+/*   Created: 2023/02/16 15:36:25 by mkhan             #+#    #+#             */
+/*   Updated: 2023/02/16 15:41:15 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZE_HPP
-#define SERIALIZE_HPP
+#include "Identify.hpp"
 
-# include <iostream>
-# include <string>
-# include <cstdlib>
-# include <cstdint>
-struct Data
+int main()
 {
-	std::string	s;
-	int			n;
-};
-
-class Serialize
-{
-	public:
-		Serialize();
-		Serialize(Serialize const &object);
-		Serialize & operator=(Serialize const &rhs);
-		~Serialize();
-
-		static uintptr_t	serialize(Data *ptr);
-		static Data *deserialize(uintptr_t raw);
-};
-
-#endif
+	Base *base;
+	base = generate();
+	identify(base);
+	identify(*base);
+}
