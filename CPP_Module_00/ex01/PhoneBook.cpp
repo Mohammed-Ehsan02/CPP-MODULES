@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:20:39 by mkhan             #+#    #+#             */
-/*   Updated: 2023/03/15 16:23:20 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/03/15 17:01:01 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	PhoneBook::addContact(Contact contact) {
 void	PhoneBook::printContacts(void) {
 	int i = 0;
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
-	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
+	std::cout << "|   Index  |First Name| Last Name| Nickname |" << std::endl;
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
 	while (i < this->_maxIndex) {
 		std::cout << "|         " << i + 1 << "|";
