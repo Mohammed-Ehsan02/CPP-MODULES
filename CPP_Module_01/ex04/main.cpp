@@ -34,7 +34,7 @@ void	replace_text(std::ifstream &MyFile, char **argv)
 	to_find = argv[2];
 	to_replace = argv[3];
 	rep_file_name = file_name + ".replace";
-	std::ofstream rep_file(rep_file_name);
+	std::ofstream rep_file(rep_file_name.c_str());
 	while (!MyFile.eof() && to_find.size())
 	{
 		final_str = "";

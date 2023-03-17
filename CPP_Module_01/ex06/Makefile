@@ -18,6 +18,7 @@ CC = c++
 
 RM = rm -f
 
+# CFLAGS = -std=c++98 -g
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = main

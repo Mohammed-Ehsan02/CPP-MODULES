@@ -35,10 +35,13 @@ void	harl_complain(char *argv, Harl &Person)
 	{
 		case 0:
 			Person.complain("DEBUG");
+			/*Fall Through*/
 		case 1:
 			Person.complain("INFO");
+			/*Fall Through*/
 		case 2:
 			Person.complain("WARNING");
+			/*Fall Through*/
 		case 3:
 			Person.complain("ERROR");
 			break ;
