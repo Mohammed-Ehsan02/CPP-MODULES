@@ -13,8 +13,9 @@
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
+# include <cstdlib>
 
 class Brain
 {
