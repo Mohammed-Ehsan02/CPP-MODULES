@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:21:04 by mkhan             #+#    #+#             */
-/*   Updated: 2023/03/15 16:55:46 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/03/26 14:01:29 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	Contact::setPhoneNumber(void) {
 		if (!std::getline(std::cin, phoneNumber))
 			break;
 		if (phoneNumber.length() > 0) {
-			if (is_digit(phoneNumber)) {
+			if (is_digit(phoneNumber) && phoneNumber.length() < 9) {
 				try {
 					phoneNumberInt = std::stol(phoneNumber);
 					this->_phoneNumber = phoneNumberInt;
