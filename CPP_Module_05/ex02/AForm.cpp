@@ -72,7 +72,7 @@ AForm::~AForm()
 
 void	AForm::beSigned(Bureaucrat const &rhs)
 {
-	if (rhs.getGrade() < this->_signGrade)
+	if (rhs.getGrade() > this->_signGrade)
 		throw AForm::GradeTooLowException();
 	else
 		this->_isSigned = true;
