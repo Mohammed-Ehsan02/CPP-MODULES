@@ -15,56 +15,6 @@
 int main()
 {
 	{
-		std::string formName = "presidential pardon"; 
-		std::string formTarget = "Tae";
-		if (formName.empty() || formTarget.empty()) 
-		{
-				throw std::invalid_argument("Invalid parameters");
-		}
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		Intern intern;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		Bureaucrat bureaucrat("Adam", 1);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		AForm *f = intern.makeForm(formName, formTarget);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		std::cout << *f;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		bureaucrat.signAForm(*f);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		std::cout << (*f).getSigned() << std::endl;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		bureaucrat.executeForm(*f);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		delete f;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	}
-	{
-		std::string formName = "robotomy request"; 
-		std::string formTarget = "Bender";
-		if (formName.empty() || formTarget.empty()) 
-		{
-				throw std::invalid_argument("Invalid parameters");
-		}
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		Intern intern;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		Bureaucrat bureaucrat("Hope", 1);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		AForm *f = intern.makeForm(formName, formTarget);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		std::cout << *f;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		bureaucrat.signAForm(*f);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		std::cout << (*f).getSigned() << std::endl;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		bureaucrat.executeForm(*f);
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-		delete f;
-		std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	}
-	{
 		std::string formName = "shrubbery creation"; 
 		std::string formTarget = "Gorms";
 		if (formName.empty() || formTarget.empty()) 
@@ -89,4 +39,65 @@ int main()
 		delete f;
 		std::cout << "-----------------------------------------------------------------------------" << std::endl;
 	}
+	// {
+	// 	std::string formName = "presidential pardon"; 
+	// 	std::string formTarget = "Tae";
+	// 	if (formName.empty() || formTarget.empty()) 
+	// 	{
+	// 			throw std::invalid_argument("Invalid parameters");
+	// 	}
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	Intern intern;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	Bureaucrat bureaucrat("Adam", 1);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	AForm *f = intern.makeForm(formName, formTarget);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	std::cout << *f;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	bureaucrat.signAForm(*f);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	std::cout << (*f).getSigned() << std::endl;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	bureaucrat.executeForm(*f);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	delete f;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// }
+	// {
+	// 	std::string formName = "robotomy request"; 
+	// 	std::string formTarget = "Bender";
+	// 	if (formName.empty() || formTarget.empty()) 
+	// 	{
+	// 			throw std::invalid_argument("Invalid parameters");
+	// 	}
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	Intern intern;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	Bureaucrat bureaucrat("Hope", 1);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	AForm *f = intern.makeForm(formName, formTarget);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	std::cout << *f;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	bureaucrat.signAForm(*f);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	std::cout << (*f).getSigned() << std::endl;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	bureaucrat.executeForm(*f);
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// 	delete f;
+	// 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	// }
+	/*-------------------- SUBJECT MAIN ----------------------------*/
+	// {
+		// Intern someRandomIntern;
+		// Bureaucrat b("John", 1);
+		// AForm* rrf;
+		// rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		// b.signAForm(*rrf);
+		// std::cout << rrf->getSigned() << std::endl;
+		// b.executeForm(*rrf);
+		// delete rrf;
+	// }
 }
