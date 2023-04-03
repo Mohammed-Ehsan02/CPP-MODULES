@@ -20,7 +20,7 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
-NAME = main
+NAME = convert
 
 %.o : %.cpp
 			$(CC) $(CFLAGS) -c $< -o $@
