@@ -12,9 +12,42 @@
 
 #include "ScalarConverter.hpp"
 
-bool	is_convertible(std::string argv)
+bool is_num(std::string str)
 {
-	if ()
+	if ((str.find_first_not_of("0123456789") == std::string::npos)
+		|| (str.find_first_not_of("-0123456789") == std::string::npos && str[0] == '-'))
+		return (true);
+	return (false);
+}
+
+bool is_float(std::string str)
+{
+	if ((str.find_first_not_of("0123456789.f") == std::string::npos)
+		|| (str.find_first_not_of("-0123456789.f") == std::string::npos && str[0] == '-'))
+		return (true);
+	return (false);
+}
+
+bool is_double(std::string str)
+{
+	if ((str.find_first_not_of("0123456789.") == std::string::npos)
+		|| (str.find_first_not_of("-0123456789.") == std::string::npos && str[0] == '-'))
+		return (true);
+	return (false);
+}
+
+bool is_char(std::string str)
+{
+	if (str.length() == 1)
+		return (true);
+	return (false);
+}
+
+bool is_convertable(std::string str)
+{
+	if (is_num(str) || is_double(str) || is_float(str) || is_char(str))
+		return (true);
+	return (false);
 }
 
 int main(int argc, char **argv)
@@ -23,8 +56,8 @@ int main(int argc, char **argv)
 	{
 		if (is_convertable(argv[1]) && argv[1][0])
 		{
-			ScalarConverter convert(argv[1]);
-			convert.convert();
+			ScalarConverter convert;
+			convert.convert(argv[1]);
 			return (0);
 		}
 		std::cout << "Invalid Argument" << std::endl;
@@ -32,31 +65,4 @@ int main(int argc, char **argv)
 	}
 	std::cout << "Invalid Number of arguments. -- usage : ./convert <arg>" << std::endl;
 	return (1);
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("0");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("nan");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("inff");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("-inff");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("42.0f");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("67");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("97.0");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("2147483647");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("2147483648");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("-2147483648");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("-2147483649");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("12345678912345");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	// ScalarConverter::convert("-12345678912345");
-	// std::cout << "-----------------------------------------------------------------------------" << std::endl;
 }
