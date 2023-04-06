@@ -16,6 +16,9 @@ int main()
 {
 	Data data;
 	data.s = "Data is Money";
+	data.n = 42;
+
+	// Serialize ser;
 	
 	uintptr_t serializedValue = Serialize::serialize(&data);
 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
@@ -28,11 +31,7 @@ int main()
 	std::cout << "&data            : " << &data << std::endl;
 	std::cout << "deserializeValue : " << deserializedValue << std::endl;
 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	
-	if (&data == deserializedValue)
-		std::cout << "Data encryption successful" << std::endl;
-	else
-		std::cout << "Data encryption failure" << std::endl;
+	std::cout << deserializedValue->s << " + " << deserializedValue->n << std::endl;
 	std::cout << "-----------------------------------------------------------------------------" << std::endl;
 	return (0);
 }

@@ -25,12 +25,13 @@ struct Data
 
 class Serialize
 {
-	public:
+	private:
 		Serialize();
 		Serialize(Serialize const &object);
 		Serialize & operator=(Serialize const &rhs);
 		~Serialize();
 
+	public:
 		static uintptr_t	serialize(Data *ptr);
 		static Data *deserialize(uintptr_t raw);
 };

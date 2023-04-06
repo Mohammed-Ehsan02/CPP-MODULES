@@ -21,12 +21,13 @@
 
 class ScalarConverter
 {
-	public:
+	private:
 		ScalarConverter();
 		ScalarConverter(ScalarConverter const &object);
 		ScalarConverter &operator=(ScalarConverter const &rhs);
 		~ScalarConverter();
 		
+	public:
 		static void	convert(std::string str);
 		static void	toChar(std::string str);
 		static void	toInt(std::string str);
