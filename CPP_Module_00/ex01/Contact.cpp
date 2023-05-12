@@ -87,32 +87,21 @@ std::string	Contact::getNickname(void) {
 
 void	Contact::setPhoneNumber(void) {
 	std::string phoneNumber;
-	long int	phoneNumberInt;
 
 	while (1) {
 		std::cout << "Enter phone number: ";
 		if (!std::getline(std::cin, phoneNumber))
 			break;
 		if (phoneNumber.length() > 0) {
-			if (is_digit(phoneNumber) && phoneNumber.length() < 9) {
-				try {
-					phoneNumberInt = std::stol(phoneNumber);
-					this->_phoneNumber = phoneNumberInt;
-					break ;
-				}
-				catch (std::exception &e) {
-					std::cout << "Phone number err " << e.what()<< std::endl;
-				}
-			}
-			else
-				std::cout << "Phone number must be a number between 0 and 9999999999" << std::endl;
+			this->_phoneNumber = phoneNumber;
+			break ;
 		}
 		else
 			std::cout << "Phone number cannot be empty" << std::endl;
 	}
 }
 
-long int	Contact::getPhoneNumber(void) {
+std::string	Contact::getPhoneNumber(void) {
 	return this->_phoneNumber;
 }
 
