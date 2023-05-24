@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:14:52 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/15 19:06:03 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/05/24 13:55:39 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ class ScalarConverter
 		ScalarConverter();
 		ScalarConverter(ScalarConverter const &object);
 		ScalarConverter &operator=(ScalarConverter const &rhs);
-		~ScalarConverter();
 		
 	public:
+		~ScalarConverter();
 		static void	convert(std::string str);
 		static void	toChar(std::string str);
 		static void	toInt(std::string str);

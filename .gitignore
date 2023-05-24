@@ -33,6 +33,7 @@
 *.app
 *_shrubbery
 main
+convert
 zombie
 megaphone
 .DS_Store

@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:54:11 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/16 18:09:01 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/05/24 13:56:32 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class Serialize
 		Serialize();
 		Serialize(Serialize const &object);
 		Serialize & operator=(Serialize const &rhs);
-		~Serialize();
 
 	public:
+		~Serialize();
 		static uintptr_t	serialize(Data *ptr);
 		static Data *deserialize(uintptr_t raw);
 };
