@@ -20,7 +20,7 @@ class Contact {
 		std::string	_firstName;
 		std::string	_lastName;
 		std::string	_nickname;
-		long int	_phoneNumber;
+		std::string	_phoneNumber;
 		std::string	_darkestSecret;
 	public:
 		Contact(void);
@@ -33,7 +33,7 @@ class Contact {
 		std::string	getFirstName(void);
 		std::string	getLastName(void);
 		std::string	getNickname(void);
-		long int	getPhoneNumber(void);
+		std::string	getPhoneNumber(void);
 		std::string	getDarkestSecret(void);
 		void		printContact(void);
 };
