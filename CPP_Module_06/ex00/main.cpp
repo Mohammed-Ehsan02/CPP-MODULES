@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:48:36 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/16 13:34:28 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/05/27 13:40:57 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ bool is_double(std::string str)
 
 bool is_char(std::string str)
 {
-	if (str.length() == 1)
+	if (str.length() == 1 && (str != "nan" || str != "inff" || str != "-inff"))
+		return (true);
+	else if (str == "nan" || str == "inff" || str == "-inff")
 		return (true);
 	return (false);
 }
@@ -56,7 +58,6 @@ int main(int argc, char **argv)
 	{
 		if (is_convertable(argv[1]) && argv[1][0])
 		{
-			// ScalarConverter convert;
 			ScalarConverter::convert(argv[1]);
 			return (0);
 		}
