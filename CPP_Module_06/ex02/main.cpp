@@ -6,7 +6,7 @@
 /*   By: mkhan <mkhan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:36:25 by mkhan             #+#    #+#             */
-/*   Updated: 2023/02/16 15:41:15 by mkhan            ###   ########.fr       */
+/*   Updated: 2023/05/30 11:38:46 by mkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ int main()
 	base = generate();
 	identify(base);
 	identify(*base);
+	delete base;
 }
