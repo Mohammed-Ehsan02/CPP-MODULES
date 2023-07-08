@@ -60,7 +60,6 @@ void	replace_text(std::ifstream &MyFile, char **argv)
 
 int main(int argc, char **argv)
 {
-	std::string text;
 	if (argc == 4)
 	{		
 		std::ifstream MyFile(argv[1]);
