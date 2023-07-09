@@ -22,7 +22,7 @@ class BitcoinExchange
 		bool	isValidDate(std::string	date);
 		bool	isValidDelim(std::string	line);
 		bool	isValidDMY(std::string year, std::string month, std::string day);
-		int		isValidValue(std::string	val);
+		float	isValidValue(std::string	val);
 
 		std::string	lowerBound(std::string date);
 

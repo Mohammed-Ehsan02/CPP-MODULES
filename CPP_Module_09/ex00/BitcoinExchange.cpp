@@ -94,7 +94,7 @@ bool	BitcoinExchange::isValidDelim(std::string date)
 	return (true);
 }
 
-int		BitcoinExchange::isValidValue(std::string value)
+float		BitcoinExchange::isValidValue(std::string value)
 {
 	float	val = atof(value.c_str());
 	if (value.find("-") == 0)
