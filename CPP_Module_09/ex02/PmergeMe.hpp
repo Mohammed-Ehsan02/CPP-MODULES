@@ -4,11 +4,27 @@
 #include <iostream>
 #include <vector>
 #include <deque>
+#include <time.h>
 
 class PmergeMe
 {
     private:
-        void    fillContainers(char **argv);
+		int					_k;
+		std::vector<int>	_vec;
+		std::deque<int>		_deque;
+
+        void    fillAndPrint(char **argv);
+		void	sortContainers();
+
+		void	vecSort(int begin, int end);
+		void	mergeVec(int begin, int mid, int end);
+		void	vecInsertion(int begin, int end);
+		void	printVec();
+
+		void	dequeSort(int begin, int end);
+		void	mergeDeque(int begin, int mid, int end);
+		void	dequeInsertion(int begin, int end);
+
         
     public:
         PmergeMe();
@@ -17,42 +33,5 @@ class PmergeMe
         PmergeMe &operator=(const PmergeMe &rhs);
         ~PmergeMe();
 };
-
-PmergeMe::PmergeMe()
-{
-}
-
-void    PmergeMe::fillContainers(char **argv)
-{
-    int i, j;
-
-    i = 1;
-
-}
-
-PmergeMe::PmergeMe(char **argv)
-{
-    this->fillContainers(argv);
-
-}
-
-PmergeMe::PmergeMe(const PmergeMe &object)
-{
-    *this = object;
-}
-
-PmergeMe &PmergeMe::operator=(const PmergeMe &rhs)
-{
-    if (this != &rhs)
-    {
-
-    }
-    return (*this);
-}
-
-PmergeMe::~PmergeMe()
-{
-}
-
 
 #endif
