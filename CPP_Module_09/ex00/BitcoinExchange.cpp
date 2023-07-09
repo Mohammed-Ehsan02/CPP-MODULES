@@ -77,7 +77,10 @@ bool	BitcoinExchange::isValidDate(std::string date)
 	getline(str, month, '-');
 	getline(str, day);
 	if (!this->isValidDMY(year, month, day))
+	{
+		std::cout << "Error: bad input => " << date << std::endl;
 		return (false);
+	}
 	return (true);
 }
 
@@ -96,12 +99,12 @@ int		BitcoinExchange::isValidValue(std::string value)
 	float	val = atof(value.c_str());
 	if (value.find("-") == 0)
 	{
-		std::cout << "Only Positive Values" << std::endl;
+		std::cout << "Error: not a positive number." << std::endl;
 		return (-1);
 	}
 	if (value.size() > 4 || val > 1000)
 	{
-		std::cout << "Too Big" << std::endl;
+		std::cout << "Error: too large a number." << std::endl;
 		return (-1);
 	}
 	return (val);
@@ -162,7 +165,7 @@ void	BitcoinExchange::parseDates(std::string line)
 	str >> date >> delim >> value;
 
 	val = this->isValidValue(value);
-	if (!(this->isValidDate(date)) || !(this->isValidDelim(date)) || val == -1)
+	if (!(this->isValidDate(date)) || !(this->isValidDelim(line)) || val == -1)
 		return ;
 	this->getDateAndPrint(date, val);
 }
@@ -179,8 +182,8 @@ void	BitcoinExchange::calculate(std::string inf)
 	if (line.compare("data | value") == 0)
 	{
 		std::cout << "Error: Invalid File Format" << std::endl;
-		// infile.close();
-		// return ;
+		infile.close();
+		return ;
 	}
 	else
 	{
