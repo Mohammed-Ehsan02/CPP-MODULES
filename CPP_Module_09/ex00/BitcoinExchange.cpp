@@ -70,7 +70,7 @@ bool	BitcoinExchange::isValidDate(std::string date)
 
 	if (date.size() != 10 || date[4] != '-' || date[7] != '-')
 	{
-		std::cout << "Error: Invalid Date" << std::endl;
+		std::cout << "Error: bad input => " << date << std::endl;
 		return (false);
 	}
 	getline(str, year, '-');
@@ -178,7 +178,6 @@ void	BitcoinExchange::calculate(std::string inf)
 	if (infile.fail())
 		std::cout << "Error: Input file Error" << std::endl;
 	getline (infile, line);
-	std::cout << line << std::endl;
 	if (line.compare("data | value") == 0)
 	{
 		std::cout << "Error: Invalid File Format" << std::endl;
