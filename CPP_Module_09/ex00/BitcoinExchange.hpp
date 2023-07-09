@@ -2,15 +2,31 @@
 #define BITCOINEXCHANGE_HPP
 
 #include <iostream>
+#include <sstream>
 #include <fstream>
 #include <string>
+#include <map>
 
 class BitcoinExchange
 {
     private:
-        /* data */
+		std::map<std::string, float> _rates;
+
+		void	readDataFile();
+		void	calculate(std::string infile);
+		void	parseDates(std::string line);
+		void	getDateAndPrint(std::string date, float val);
+
+		bool	isValidDate(std::string	date);
+		bool	isValidDelim(std::string	line);
+		bool	isValidDMY(std::string year, std::string month, std::string day);
+		int		isValidValue(std::string	val);
+
+		std::string	lowerBound(std::string date);
+
     public:
         BitcoinExchange();
+        BitcoinExchange(std::string	infile);
         BitcoinExchange(const BitcoinExchange &object);
         BitcoinExchange &operator=(const BitcoinExchange &rhs);
         ~BitcoinExchange();
