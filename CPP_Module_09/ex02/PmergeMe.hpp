@@ -2,6 +2,7 @@
 #define PMERGEME_HPP
 
 #include <iostream>
+#include <stdlib.h>
 #include <vector>
 #include <deque>
 #include <time.h>
