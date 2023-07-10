@@ -14,11 +14,11 @@ class BitcoinExchange
     private:
 		std::map<std::string, float> _rates;
 
-		void	readDataFile();
-		void	calculate(std::string infile);
 		void	parseDates(std::string line);
 		void	getDateAndPrint(std::string date, float val);
 
+		bool	readDataFile();
+		bool	calculate(std::string infile);
 		bool	isValidDate(std::string	date);
 		bool	isValidDelim(std::string	line);
 		bool	isValidDMY(std::string year, std::string month, std::string day);

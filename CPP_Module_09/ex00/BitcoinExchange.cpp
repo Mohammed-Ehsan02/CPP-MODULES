@@ -6,8 +6,10 @@ BitcoinExchange::BitcoinExchange()
 
 BitcoinExchange::BitcoinExchange(std::string infile)
 {
-	this->readDataFile();
-	this->calculate(infile);
+	if (!this->readDataFile())
+		return ;
+	if (!this->calculate(infile))
+		return ;
 }
 
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &object)
@@ -27,13 +29,17 @@ BitcoinExchange::~BitcoinExchange()
 {
 }
 
-void	BitcoinExchange::readDataFile()
+bool	BitcoinExchange::readDataFile()
 {
 	std::ifstream	data("data.csv");
 	std::string		line;
 
 	if (data.fail())
+	{
 		std::cout << "Error: Cannot Open Data File" << std::endl;
+		data.close();
+		return (false);
+	}
 	getline(data, line);
 	while (!(data.eof()))
 	{
@@ -46,6 +52,7 @@ void	BitcoinExchange::readDataFile()
 		this->_rates[date] = atof(rate.c_str());
 	}
 	data.close();
+	return (true);
 }
 
 bool	BitcoinExchange::isValidDMY(std::string year, std::string month, std::string day)
@@ -170,19 +177,23 @@ void	BitcoinExchange::parseDates(std::string line)
 	this->getDateAndPrint(date, val);
 }
 
-void	BitcoinExchange::calculate(std::string inf)
+bool	BitcoinExchange::calculate(std::string inf)
 {
 	std::ifstream	infile(inf.c_str());
 	std::string		line;
 
 	if (infile.fail())
+	{
 		std::cout << "Error: Input file Error" << std::endl;
+		infile.close();
+		return (false);
+	}
 	getline (infile, line);
 	if (line.compare("data | value") == 0)
 	{
 		std::cout << "Error: Invalid File Format" << std::endl;
 		infile.close();
-		return ;
+		return (false);
 	}
 	else
 	{
@@ -192,5 +203,6 @@ void	BitcoinExchange::calculate(std::string inf)
 		}
 	}
 	infile.close();
+	return (true);
 }
 
