@@ -156,7 +156,7 @@ void	BitcoinExchange::getDateAndPrint(std::string date, float val)
 		std::cout << " = " << result << std::endl;
 		return ;
 	}
-	else
+	else if (this->isValidDate(date))
 	{
 		date = this->lowerBound(date);
 		this->getDateAndPrint(date, val);
