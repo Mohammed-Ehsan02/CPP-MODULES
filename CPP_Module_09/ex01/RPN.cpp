@@ -6,10 +6,16 @@ RPN::RPN()
 
 RPN::RPN(std::string argv)
 {
+	this->_div_zero = true;
 	if (argv.size() > 3)
 	{
         this->fillStack(argv);
-	    std::cout << this->_rpn_num.top() << std::endl;
+		if (_div_zero == false)
+		{
+			std::cout << "Dividing by zero" << std::endl;
+			return ;
+		}
+		std::cout << this->_rpn_num.top() << std::endl;
     }
 }
 
@@ -44,9 +50,11 @@ void	RPN::calculate()
 	this->_rpn_num.pop();
 	operation = this->_rpn_stack.top();
 	this->_rpn_stack.pop();
+	if (operation == '/' && operand2 == 0)
+		this->_div_zero = false;
 	if (operation == '*')
 		this->_rpn_num.push(operand1 * operand2);
-	else if (operation == '/')
+	else if (operation == '/' && operand2 != 0)
 		this->_rpn_num.push(operand1 / operand2);
 	else if (operation == '-')
 		this->_rpn_num.push(operand1 - operand2);
