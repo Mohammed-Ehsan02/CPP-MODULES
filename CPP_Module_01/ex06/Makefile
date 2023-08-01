@@ -14,22 +14,22 @@ SRC = main.cpp Harl.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-CC = c++
+CXX = c++
 
 RM = rm -f
 
-# CFLAGS = -std=c++98 -g
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+# CXXFLAGS = -std=c++98 -g
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = main
 
 %.o : %.cpp
-			$(CC) $(CFLAGS) -c $< -o $@
+			$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $@
+	@$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 
 clean:
 	@$(RM) $(OBJ)

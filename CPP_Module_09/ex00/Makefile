@@ -14,21 +14,21 @@ SRC =	main.cpp BitcoinExchange.cpp
 
 OBJ =	$(SRC:.cpp=.o)
 
-CC =	c++
+CXX =	c++
 
 RM =	rm -f
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
 NAME =	btc
 
 %.o : %.cpp
-			$(CC) $(CFLAGS) -c $< -o $@
+			$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $@
+	@$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 
 clean:
 	@$(RM) $(OBJ)
