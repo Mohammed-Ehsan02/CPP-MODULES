@@ -30,8 +30,6 @@ Cat & Cat::operator=(Cat const &rhs)
 	if (this != &rhs)
 	{
 		this->_type = rhs._type;
-		if (this->_brain)
-			delete (this->_brain);
 		this->_brain = new Brain();
 		this->_brain->setIdeas(rhs._brain->getIdeaas());
 
