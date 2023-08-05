@@ -67,6 +67,10 @@ bool	BitcoinExchange::isValidDMY(std::string year, std::string month, std::strin
 		return (false);
 	if (d < 1 || d > 31)
 		return (false);
+	if ((m == 2 && d > 28) && (y != 2012 && y != 2016 && y != 2020))
+		return (false);
+	if ((m == 2 && d > 29) && (y == 2012 || y == 2016 || y == 2020))
+		return (false);
 	return (true);
 }
 
